@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Official Site</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ColorThief for Dynamic Colors -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Dynamic Background Layer -->
+    <div id="dynamic-bg" class="dynamic-bg"></div>
+    <!-- Vinyl Particles Container -->
+    <div id="vinyl-particles-container" class="vinyl-particles-container"></div>
+    <!-- Hero Rings Fixed Container (Prevents Chrome Infinite Scroll Bug) -->
+    <div class="hero-rings-fixed-wrapper">
+        <div id="hero-rings" class="hero-rings"></div>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content scroll-reveal">
+                <div class="hero-image-wrapper">
+                    <div class="hero-gradient-mask"></div>
+                    <img id="artist-img" src="" alt="Artist Image">
+                </div>
+                <div class="badge-container">
+                    <div id="artist-badge" class="badge hidden"></div>
+                    <a href="https://www.instagram.com/dejora.artist/" target="_blank" class="hero-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <h1 id="artist-name" class="glitch-effect">Loading...</h1>
+            </div>
+        </section>
+
+        <!-- Latest Release Section -->
+        <section id="latest-release-section" class="latest-release hidden">
+            <h2 class="section-title">Latest Release</h2>
+            <div class="release-card" id="latest-release-card">
+                <div class="card-flipper" id="latest-flipper">
+                    <div class="card-front">
+                        <!-- Animated blurred background layer -->
+                        <div class="release-card-bg" id="release-card-bg"></div>
+                        <div class="release-card-inner">
+                            <div class="card-image-container">
+                                <img id="latest-img" src="" alt="Latest Release">
+                            </div>
+                            <div class="card-content">
+                                <span id="latest-type" class="release-type"></span>
+                                <h3 id="latest-title" class="release-title"></h3>
+                                <div id="latest-links" class="links-container">
+                                    <!-- Stream links injected here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back" id="latest-card-back">
+                        <!-- Lyrics injected here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discography Section -->
+        <section id="discography-section" class="discography hidden">
+            <h2 class="section-title">Discography</h2>
+            <div id="discography-tabs" class="tabs-container scroll-reveal">
+                <!-- Tabs injected here -->
+            </div>
+            <div id="discography-grid" class="discography-grid">
+                <!-- Grouped content injected here -->
+            </div>
+        </section>
+
+        <!-- Bio Section -->
+        <section id="bio-section" class="bio-section hidden">
+            <h2 class="section-title">About</h2>
+            <div class="bio-content-wrapper scroll-reveal">
+                <div class="bio-text">
+                    <p id="artist-bio-text"></p>
+                    <div id="bio-socials" class="bio-socials"></div>
+                </div>
+                <div class="bio-image-container">
+                    <img id="bio-img" src="" alt="Artist Bio">
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; <span id="current-year"></span> <span id="footer-name"></span>. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="dejora_data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
